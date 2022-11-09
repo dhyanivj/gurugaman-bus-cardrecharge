@@ -37,4 +37,16 @@ body {
   width: 138px;
   height: 47px;
   background: white;
+  font-weight: 500;
+  font-size: 17px;
+}
+.screen2 {
+  background: url(./images/screen2-linebg.svg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.dynamic-card-text {
+  position: fixed;
+  margin-left: 17rem;
+  margin-top: 8rem;
 }
