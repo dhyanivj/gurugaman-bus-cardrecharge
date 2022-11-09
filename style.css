@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    background: linear-gradient(180deg, #023C76 0%, #0C69C7 100%);
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    color: white;
+}
+
+.page-title {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.fa-angle-left {
+    font-size: 20px;
+}
