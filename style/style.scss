@@ -118,13 +118,17 @@ input[type="number"] {
   width: 100%;
   color: white;
   font-weight: 800;
-
   &:focus-visible {
-    border: 0px;
+    border: none;
+    outline: none;
+  }
+  &:focus {
+    border: none;
+    outline: none;
   }
 }
 
-// ----------- SCREEN 4 -------------->
+// ---------- SCREEN 4 -------------->
 
 .screen4 {
   background: url(../images/screen4-linebg.svg) no-repeat;

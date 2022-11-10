@@ -120,7 +120,12 @@ input[type=number] {
   font-weight: 800;
 }
 .money-input:focus-visible {
-  border: 0px;
+  border: none;
+  outline: none;
+}
+.money-input:focus {
+  border: none;
+  outline: none;
 }
 
 .screen4 {
