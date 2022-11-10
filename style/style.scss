@@ -108,8 +108,9 @@ input[type="number"] {
 }
 
 .bottom-pay {
-  position: absolute;
-  bottom: 22px;
+  //   position: absolute;
+  //   bottom: 22px;
+  margin-top: 14rem;
 }
 .money-input {
   background: none;
@@ -121,4 +122,53 @@ input[type="number"] {
   &:focus-visible {
     border: 0px;
   }
+}
+
+// ----------- SCREEN 4 -------------->
+
+.screen4 {
+  background: url(../images/screen4-linebg.svg) no-repeat;
+  background-size: cover;
+  //   height: 100vh;
+}
+.ticket {
+  background: url(../images/confirm-tic.png) center no-repeat;
+  height: 100vh;
+  color: black;
+}
+.user-details {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  > div:nth-child(1) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #515151;
+  }
+}
+.details {
+  display: flex;
+  padding-top: 32%;
+  margin-left: 22%;
+  flex-direction: column;
+  height: 100vh;
+  > div:nth-child(1) {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+.pay {
+  background: #023c76;
+  box-shadow: 8px 13px 10px -6px rgba(0, 0, 0, 0.16);
+  border-radius: 16px;
+  //   width: 293px;
+  height: 64px;
+  color: white;
+  border: 0px;
+  margin-right: 6.5rem;
+  margin-top: 2rem;
 }
