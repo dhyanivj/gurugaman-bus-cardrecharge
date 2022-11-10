@@ -6,11 +6,13 @@ body {
   height: 100vh;
   color: white;
 }
+
 .screen1 {
   background: url(./images/screen1-linebg.svg) no-repeat;
   background-size: cover;
   height: 100vh;
 }
+
 .page-title {
   font-weight: 400;
   font-size: 20px;
@@ -20,12 +22,14 @@ body {
   font-size: 30px;
   /* padding: 10; */
 }
+
 .main-text {
   font-weight: 700;
   font-size: 39px;
   line-height: 47px;
 }
-.username {
+
+.inputbox {
   height: 55px;
   border-radius: 10px;
   border: 2px solid rgba(0, 34, 67, 0.411);
@@ -40,13 +44,28 @@ body {
   font-weight: 500;
   font-size: 17px;
 }
+
 .screen2 {
   background: url(./images/screen2-linebg.svg) no-repeat;
   background-size: cover;
   height: 100vh;
 }
+
 .dynamic-card-text {
-  position: fixed;
-  margin-left: 17rem;
-  margin-top: 8rem;
+  position: relative;
+  top: 12rem;
+  left: 59%;
+}
+
+/* Remove arrow from number input  */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

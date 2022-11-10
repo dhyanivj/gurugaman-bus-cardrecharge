@@ -4,6 +4,10 @@ const screenOne = document.querySelector('.screen1')
 const screenTwo = document.querySelector('.screen2')
 const backScreenOne = document.querySelector('.back-s1')
 const backScreenTwo = document.querySelector('.back-s2')
+const cardText = document.querySelector('.dynamic-card-text')
+const cardNumber = document.querySelector('.cardnumber')
+
+
 
 continueNameBtn.addEventListener('click', function () {
     console.log(userName.value);
@@ -14,4 +18,9 @@ continueNameBtn.addEventListener('click', function () {
 backScreenTwo.addEventListener('click', function () {
     screenOne.classList.remove('d-none')
     screenTwo.classList.add('d-none')
+})
+
+cardNumber.addEventListener('keyup', function () {
+    console.log(cardNumber.value);
+    cardText.textContent = `${cardNumber.value}`
 })
