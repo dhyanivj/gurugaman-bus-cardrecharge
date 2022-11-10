@@ -14,43 +14,43 @@ const cardNumber = document.querySelector(".cardnumber");
 const proceed = document.querySelector(".proceed");
 
 continueNameBtn.addEventListener("click", function () {
-  console.log(userName.value);
-  screenOne.classList.add("d-none");
-  screenTwo.classList.remove("d-none");
+    console.log(userName.value);
+    screenOne.classList.add("d-none");
+    screenTwo.classList.remove("d-none");
 });
 
 continueCardBtn.addEventListener("click", function () {
-  screenOne.classList.add("d-none");
-  screenTwo.classList.add("d-none");
-  screenThree.classList.remove("d-none");
+    screenOne.classList.add("d-none");
+    screenTwo.classList.add("d-none");
+    screenThree.classList.remove("d-none");
 });
 
 backScreenTwo.addEventListener("click", function () {
-  screenOne.classList.remove("d-none");
-  screenTwo.classList.add("d-none");
-  screenFour.classList.add("d-none");
+    screenOne.classList.remove("d-none");
+    screenTwo.classList.add("d-none");
+    screenFour.classList.add("d-none");
 });
 
 backScreenThree.addEventListener("click", function () {
-  screenOne.classList.add("d-none");
-  screenTwo.classList.remove("d-none");
-  screenThree.classList.add("d-none");
-  screenFour.classList.add("d-none");
+    screenOne.classList.add("d-none");
+    screenTwo.classList.remove("d-none");
+    screenThree.classList.add("d-none");
+    screenFour.classList.add("d-none");
 });
 backScreenFour.addEventListener("click", function () {
-  screenOne.classList.add("d-none");
-  screenTwo.classList.add("d-none");
-  screenThree.classList.remove("d-none");
-  screenFour.classList.add("d-none");
+    screenOne.classList.add("d-none");
+    screenTwo.classList.add("d-none");
+    screenThree.classList.remove("d-none");
+    screenFour.classList.add("d-none");
 });
 proceed.addEventListener("click", function () {
-  screenOne.classList.add("d-none");
-  screenTwo.classList.add("d-none");
-  screenThree.classList.add("d-none");
-  screenFour.classList.remove("d-none");
+    screenOne.classList.add("d-none");
+    screenTwo.classList.add("d-none");
+    screenThree.classList.add("d-none");
+    screenFour.classList.remove("d-none");
 });
 
 cardNumber.addEventListener("keyup", function () {
-  //   console.log(cardNumber.value);
-  cardText.textContent = `${cardNumber.value}`;
+    //   console.log(cardNumber.value);
+    cardText.textContent = `${cardNumber.value}`;
 });
