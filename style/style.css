@@ -130,7 +130,6 @@ input[type=number] {
 
 .ticket {
   background: url(../images/confirm-tic.png) center no-repeat;
-  height: 100vh;
   color: black;
 }
 
@@ -152,8 +151,8 @@ input[type=number] {
   display: flex;
   padding-top: 32%;
   margin-left: 22%;
+  padding-bottom: 37%;
   flex-direction: column;
-  height: 100vh;
 }
 .details > div:nth-child(1) {
   font-weight: 600;
@@ -170,4 +169,12 @@ input[type=number] {
   border: 0px;
   margin-right: 6.5rem;
   margin-top: 2rem;
+  font-size: 22px;
+  font-weight: 600;
+}
+.pay:hover {
+  color: black;
+  background: rgb(232, 249, 255);
+  transition: 0.3s;
+  border: 2px solid #023c76;
 }/*# sourceMappingURL=style.css.map */
