@@ -14,9 +14,10 @@ const cardNumber = document.querySelector(".cardnumber");
 const proceed = document.querySelector(".proceed");
 
 continueNameBtn.addEventListener("click", function () {
-    console.log(userName.value);
+    // console.log(userName.value);
     screenOne.classList.add("d-none");
     screenTwo.classList.remove("d-none");
+    sessionStorage.setItem(`${userName.value}`, "uname");
 });
 
 continueCardBtn.addEventListener("click", function () {
