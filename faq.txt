@@ -1,0 +1,13 @@
+<!-- FAQ
+
+# What is this "Gurugram Bus Card Recharge Web App" ?
+
+This is a simple solution for recharging bus gurgaon bus card.
+
+# Why do we need this ?
+
+This bus card works same as Delhi metro card. But for now there is
+no solution for recharging these bus cards online!
+except few days back, when i go to the bus stand to recharge bus card they told me to recharge card by using upi by
+
+<cardNumber>.gmcbl@idfcbank -->
