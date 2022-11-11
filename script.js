@@ -1,27 +1,30 @@
-const continueNameBtn = document.querySelector(".continue-one");
-const continueCardBtn = document.querySelector(".continue-two");
 const userName = document.querySelector(".username");
 const screenOne = document.querySelector(".screen1");
 const screenTwo = document.querySelector(".screen2");
 const screenThree = document.querySelector(".screen3");
 const screenFour = document.querySelector(".screen4");
-const backScreenOne = document.querySelector(".back-s1");
 const backScreenTwo = document.querySelector(".back-s2");
 const backScreenThree = document.querySelector(".back-s3");
 const backScreenFour = document.querySelector(".back-s4");
 const cardText = document.querySelector(".dynamic-card-text");
 const cardNumber = document.querySelector(".cardnumber");
-const proceed = document.querySelector(".proceed");
 const moneyInput = document.querySelector(".money-input");
 
-continueNameBtn.addEventListener("click", function () {
+//for hidding div
+const hide = function (s) {
+  s.classList.add("d-none");
+};
+// for showing div
+const show = function (s) {
+  s.classList.remove("d-none");
+};
+
+document.querySelector(".continue-one").addEventListener("click", function () {
   if (userName.value == "") {
-    // userName.style.border = "#de7171 solid 3px ";
     userName.classList.add("wrong");
-    // alert("enter something");
   } else {
-    screenOne.classList.add("d-none");
-    screenTwo.classList.remove("d-none");
+    hide(screenOne);
+    show(screenTwo);
     sessionStorage.setItem("uname", `${userName.value}`);
     const uname = sessionStorage.getItem("uname");
     document.querySelector(".confirm-name").textContent = `${uname}`;
@@ -29,13 +32,13 @@ continueNameBtn.addEventListener("click", function () {
   }
 });
 
-continueCardBtn.addEventListener("click", function () {
+document.querySelector(".continue-two").addEventListener("click", function () {
   if (cardNumber.value == "") {
     cardNumber.classList.add("wrong");
   } else {
-    screenOne.classList.add("d-none");
-    screenTwo.classList.add("d-none");
-    screenThree.classList.remove("d-none");
+    hide(screenOne);
+    hide(screenTwo);
+    show(screenThree);
     sessionStorage.setItem("cardnumber", `${cardNumber.value}`);
     const cardnumber = sessionStorage.getItem("cardnumber");
     document.querySelector(".confirm-card").textContent = `${cardnumber}`;
@@ -43,16 +46,14 @@ continueCardBtn.addEventListener("click", function () {
   }
 });
 
-proceed.addEventListener("click", function () {
+document.querySelector(".proceed").addEventListener("click", function () {
   if (moneyInput.value == "") {
-    // userName.style.border = "#de7171 solid 3px ";
     moneyInput.classList.add("wrong");
-    // alert("enter something");
   } else {
-    screenOne.classList.add("d-none");
-    screenTwo.classList.add("d-none");
-    screenThree.classList.add("d-none");
-    screenFour.classList.remove("d-none");
+    hide(screenOne);
+    hide(screenTwo);
+    hide(screenThree);
+    show(screenFour);
     sessionStorage.setItem("amount", `${moneyInput.value}`);
     const amount = sessionStorage.getItem("amount");
     document.querySelector(".confirm-amount").textContent = `${amount}`;
@@ -61,22 +62,22 @@ proceed.addEventListener("click", function () {
 });
 
 backScreenTwo.addEventListener("click", function () {
-  screenOne.classList.remove("d-none");
-  screenTwo.classList.add("d-none");
-  screenFour.classList.add("d-none");
+  show(screenOne);
+  hide(screenTwo);
+  hide(screenFour);
 });
 
 backScreenThree.addEventListener("click", function () {
-  screenOne.classList.add("d-none");
-  screenTwo.classList.remove("d-none");
-  screenThree.classList.add("d-none");
-  screenFour.classList.add("d-none");
+  hide(screenOne);
+  show(screenTwo);
+  hide(screenThree);
+  hide(screenFour);
 });
 backScreenFour.addEventListener("click", function () {
-  screenOne.classList.add("d-none");
-  screenTwo.classList.add("d-none");
-  screenThree.classList.remove("d-none");
-  screenFour.classList.add("d-none");
+  hide(screenOne);
+  hide(screenTwo);
+  show(screenThree);
+  hide(screenFour);
 });
 
 // Typing input in dynamic card
@@ -85,10 +86,13 @@ cardNumber.addEventListener("keyup", function () {
 });
 
 //get values from sessionStorage and rediect to UPI apps
+
 document.querySelector(".pay").addEventListener("click", function () {
+  const handleName = "@paytm";
+  //to be used later: gmcbl offical upi handle = .gmcbl@idfcbank
   const finalLink = `upi://pay?pa=${sessionStorage.getItem(
     "cardnumber"
-  )}@paytm&pn=${sessionStorage.getItem(
+  )}${handleName}&pn=${sessionStorage.getItem(
     "uname"
   )}&cu=INR&am=${sessionStorage.getItem("amount")}`;
   window.open(`${finalLink}`, "_self");
