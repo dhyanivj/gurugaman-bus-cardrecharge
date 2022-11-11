@@ -229,4 +229,13 @@ input[type=number] {
   100% {
     transform: translateX(0);
   }
+}
+@media (min-width: 991.98px) {
+  .wrapper {
+    width: 30%;
+    margin: 0 auto;
+  }
+  .tic {
+    margin-top: 4%;
+  }
 }/*# sourceMappingURL=style.css.map */
