@@ -60,32 +60,17 @@ backScreenFour.addEventListener("click", function () {
   screenFour.classList.add("d-none");
 });
 
+// Typing input in dynamic card
 cardNumber.addEventListener("keyup", function () {
-  //   console.log(cardNumber.value);
   cardText.textContent = `${cardNumber.value}`;
 });
 
+// it will get values from sessionStorage and rediect to UPI apps
 document.querySelector(".pay").addEventListener("click", function () {
-  //   console.log(
-  //     `upi://pay?pa=${sessionStorage.getItem(
-  //       "cardnumber"
-  //     )}@okhdfcbank&pn=${sessionStorage.getItem(
-  //       "uname"
-  //     )}&cu=INR&am=${sessionStorage.getItem("amount")}`
-  //   );
-  //   window.open = "window.open('http://google.com)";
-  //   opener.location = "https://www.plus2net.com";
-  //   alert("yoo");
-
   const finalLink = `upi://pay?pa=${sessionStorage.getItem(
     "cardnumber"
-  )}@okhdfcbank&pn=${sessionStorage.getItem(
+  )}@paytm&pn=${sessionStorage.getItem(
     "uname"
   )}&cu=INR&am=${sessionStorage.getItem("amount")}`;
-
-  //   const finalLink = "http://google.com";
   window.open(`${finalLink}`, "_self");
 });
-
-// upi://pay?pa=upiaddress@okhdfcbank&pn=JohnDoe&cu=INR&am=
-// window.open("/page2.html", "_self");
