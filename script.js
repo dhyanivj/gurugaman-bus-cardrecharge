@@ -12,46 +12,55 @@ const backScreenFour = document.querySelector(".back-s4");
 const cardText = document.querySelector(".dynamic-card-text");
 const cardNumber = document.querySelector(".cardnumber");
 const proceed = document.querySelector(".proceed");
+const moneyInput = document.querySelector(".money-input");
 
 continueNameBtn.addEventListener("click", function () {
-    // console.log(userName.value);
-    screenOne.classList.add("d-none");
-    screenTwo.classList.remove("d-none");
-    sessionStorage.setItem(`${userName.value}`, "uname");
+  screenOne.classList.add("d-none");
+  screenTwo.classList.remove("d-none");
+  sessionStorage.setItem("uname", `${userName.value}`);
+  const uname = sessionStorage.getItem("uname");
+  document.querySelector(".confirm-name").textContent = `${uname}`;
 });
-
+// const test = sessionStorage.getItem("uname");
+// console.log(test);
 continueCardBtn.addEventListener("click", function () {
-    screenOne.classList.add("d-none");
-    screenTwo.classList.add("d-none");
-    screenThree.classList.remove("d-none");
+  screenOne.classList.add("d-none");
+  screenTwo.classList.add("d-none");
+  screenThree.classList.remove("d-none");
+  sessionStorage.setItem("cardnumber", `${cardNumber.value}`);
+  const cardnumber = sessionStorage.getItem("cardnumber");
+  document.querySelector(".confirm-card").textContent = `${cardnumber}`;
+});
+proceed.addEventListener("click", function () {
+  screenOne.classList.add("d-none");
+  screenTwo.classList.add("d-none");
+  screenThree.classList.add("d-none");
+  screenFour.classList.remove("d-none");
+  sessionStorage.setItem("amount", `${moneyInput.value}`);
+  const amount = sessionStorage.getItem("amount");
+  document.querySelector(".confirm-amount").textContent = `${amount}`;
 });
 
 backScreenTwo.addEventListener("click", function () {
-    screenOne.classList.remove("d-none");
-    screenTwo.classList.add("d-none");
-    screenFour.classList.add("d-none");
+  screenOne.classList.remove("d-none");
+  screenTwo.classList.add("d-none");
+  screenFour.classList.add("d-none");
 });
 
 backScreenThree.addEventListener("click", function () {
-    screenOne.classList.add("d-none");
-    screenTwo.classList.remove("d-none");
-    screenThree.classList.add("d-none");
-    screenFour.classList.add("d-none");
+  screenOne.classList.add("d-none");
+  screenTwo.classList.remove("d-none");
+  screenThree.classList.add("d-none");
+  screenFour.classList.add("d-none");
 });
 backScreenFour.addEventListener("click", function () {
-    screenOne.classList.add("d-none");
-    screenTwo.classList.add("d-none");
-    screenThree.classList.remove("d-none");
-    screenFour.classList.add("d-none");
-});
-proceed.addEventListener("click", function () {
-    screenOne.classList.add("d-none");
-    screenTwo.classList.add("d-none");
-    screenThree.classList.add("d-none");
-    screenFour.classList.remove("d-none");
+  screenOne.classList.add("d-none");
+  screenTwo.classList.add("d-none");
+  screenThree.classList.remove("d-none");
+  screenFour.classList.add("d-none");
 });
 
 cardNumber.addEventListener("keyup", function () {
-    //   console.log(cardNumber.value);
-    cardText.textContent = `${cardNumber.value}`;
+  //   console.log(cardNumber.value);
+  cardText.textContent = `${cardNumber.value}`;
 });

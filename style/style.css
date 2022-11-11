@@ -71,7 +71,6 @@ input[type=number] {
 .screen3 {
   background: url(../images/screen3-linebg.svg) no-repeat;
   background-size: cover;
-  height: 100vh;
 }
 
 .money {
@@ -128,13 +127,7 @@ input[type=number] {
   outline: none;
 }
 
-.screen4 {
-  background: url(../images/screen4-linebg.svg) no-repeat;
-  background-size: cover;
-}
-
 .ticket {
-  background: url(../images/confirm-tic.png) center no-repeat;
   color: black;
 }
 
@@ -154,7 +147,7 @@ input[type=number] {
 
 .details {
   display: flex;
-  padding-top: 32%;
+  padding-top: 24%;
   margin-left: 22%;
   padding-bottom: 37%;
   flex-direction: column;
@@ -182,4 +175,15 @@ input[type=number] {
   background: rgb(232, 249, 255);
   transition: 0.3s;
   border: 2px solid #023c76;
+}
+
+.tic {
+  position: absolute;
+  margin-left: auto;
+  left: 0;
+  right: 0;
+  margin-top: 13%;
+  margin-right: auto;
+  z-index: -1;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

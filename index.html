@@ -1,128 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Gurugram bus Card recharge</title>
+  </head>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="style/style.css" />
-  <title>Gurugram bus Card recharge</title>
-</head>
-
-<body>
-  <!-- --------------SCREEN 1------------ -->
-  <div class="screen1">
-    <div class="g-navbar d-flex mx-3 my-2 align-items-center">
-      <!-- <div class="back-s1">
+  <body>
+    <!-- --------------SCREEN 1------------ -->
+    <div class="screen1">
+      <div class="g-navbar d-flex mx-3 my-2 align-items-center">
+        <!-- <div class="back-s1">
         <i class="fa fa-angle-left p-2"></i>
       </div> -->
-      <div class="mx-auto page-title">Get started</div>
+        <div class="mx-auto page-title">Get started</div>
+      </div>
+      <div class="main-text ml-3 mt-5">
+        Recharge <br />
+        your bus card <br />
+        on the go
+      </div>
+      <img
+        src="./images/card-screen1.svg"
+        alt="card"
+        class="mx-auto d-block mt-4"
+      />
+      <div class="form-group mx-4 mt-4">
+        <label for="username">Your Name</label>
+        <input type="text" class="form-control inputbox username" />
+      </div>
+      <button class="btn continue-btn float-right mx-4 mt-4 continue-one">
+        Continue <i class="fa fa-arrow-right ml-2"></i>
+      </button>
     </div>
-    <div class="main-text ml-3 mt-5">
-      Recharge <br />
-      your bus card <br />
-      on the go
+    <!-- --------------SCREEN 2------------ -->
+    <div class="screen2 d-none">
+      <div class="g-navbar d-flex mx-3 my-2 align-items-center">
+        <div class="back-s2"><i class="fa fa-angle-left p-2"></i></div>
+        <div class="mx-auto page-title">Card Details</div>
+      </div>
+      <div class="main-text ml-3 mt-5">
+        Enter your <br />
+        smart card <br />
+        number
+      </div>
+      <div class="dynamic-card overflow-hidden">
+        <div class="dynamic-card-text">123456789</div>
+        <img
+          src="./images/grugaman-card-dynamic.svg"
+          alt="card"
+          class="mx-auto d-block mt-4"
+        />
+      </div>
+      <div class="form-group mx-4 mt-4">
+        <label for="username">Card Number</label>
+        <input
+          type="number"
+          class="form-control inputbox cardnumber"
+          maxlength="5"
+        />
+      </div>
+      <button class="btn continue-btn float-right mx-4 mt-4 continue-two">
+        Continue <i class="fa fa-arrow-right ml-2"></i>
+      </button>
     </div>
-    <img src="./images/card-screen1.svg" alt="card" class="mx-auto d-block mt-4" />
-    <div class="form-group mx-4 mt-4">
-      <label for="username">Your Name</label>
-      <input type="text" class="form-control inputbox username" />
-    </div>
-    <button class="btn continue-btn float-right mx-4 mt-4 continue-one">
-      Continue <i class="fa fa-arrow-right ml-2"></i>
-    </button>
-  </div>
-  <!-- --------------SCREEN 2------------ -->
-  <div class="screen2 d-none">
-    <div class="g-navbar d-flex mx-3 my-2 align-items-center">
-      <div class="back-s2"><i class="fa fa-angle-left p-2"></i></div>
-      <div class="mx-auto page-title">Card Details</div>
-    </div>
-    <div class="main-text ml-3 mt-5">
-      Enter your <br />
-      smart card <br />
-      number
-    </div>
-    <div class="dynamic-card overflow-hidden">
-      <div class="dynamic-card-text">123456789</div>
-      <img src="./images/grugaman-card-dynamic.svg" alt="card" class="mx-auto d-block mt-4" />
-    </div>
-    <div class="form-group mx-4 mt-4">
-      <label for="username">Card Number</label>
-      <input type="number" class="form-control inputbox cardnumber" maxlength="5" />
-    </div>
-    <button class="btn continue-btn float-right mx-4 mt-4 continue-two">
-      Continue <i class="fa fa-arrow-right ml-2"></i>
-    </button>
-  </div>
-  <!-- --------------SCREEN 3 - PAYMENT ------------ -->
-  <div class="screen3 d-none">
-    <div class="g-navbar d-flex mx-3 my-2 align-items-center">
-      <div class="back-s3"><i class="fa fa-angle-left p-2"></i></div>
-      <div class="mx-auto page-title">Payment</div>
-    </div>
-    <div class="money">
-      <div>Recharge Amount</div>
-      <div class="d-flex mx-5">
-        <span class="mr-4"> ₹ </span>
-        <input type="number" class="money-input" placeholder="0.00" />
+    <!-- --------------SCREEN 3 - PAYMENT ------------ -->
+    <div class="screen3 d-none">
+      <div class="g-navbar d-flex mx-3 my-2 align-items-center">
+        <div class="back-s3"><i class="fa fa-angle-left p-2"></i></div>
+        <div class="mx-auto page-title">Payment</div>
+      </div>
+      <div class="money">
+        <div>Recharge Amount</div>
+        <div class="d-flex mx-5">
+          <span class="mr-4"> ₹ </span>
+          <input type="number" class="money-input" placeholder="0.00" />
+        </div>
+      </div>
+      <div class="bottom-pay">
+        <div class="info-msg d-flex mx-4">
+          <i class="fa fa-info-circle mt-1 mr-2"></i>
+          <div>
+            After successful transaction, please go to your nearest bus stand
+            and ask them to do add value.
+          </div>
+        </div>
+        <div class="mx-4 mt-3">
+          <button class="btn proceed">Proceed to pay</button>
+        </div>
       </div>
     </div>
-    <div class="bottom-pay">
-      <div class="info-msg d-flex mx-4">
-        <i class="fa fa-info-circle mt-1 mr-2"></i>
-        <div>
-          After successful transaction, please go to your nearest bus stand
-          and ask them to do add value.
+    <!-- --------------SCREEN 4 - CONFIRMATION ------------ -->
+    <div class="screen4 d-none">
+      <div class="g-navbar d-flex mx-3 my-2 align-items-center">
+        <div class="back-s4"><i class="fa fa-angle-left p-2"></i></div>
+        <div class="mx-auto page-title">Confirm Details</div>
+      </div>
+      <div class="ticket">
+        <img src="./images/confirmbg.svg" class="tic" />
+        <div class="details">
+          <div>
+            Please confirm <br />
+            your details
+          </div>
+          <div class="user-details my-3 mt-5">
+            <div>name</div>
+            <div class="confirm-name">vijay dhyani</div>
+          </div>
+          <div class="user-details my-2">
+            <div>CARD NUMBER</div>
+            <div class="confirm-card">6548665452456</div>
+          </div>
+          <div class="user-details my-4">
+            <div>TOP UP AMOUNT</div>
+            <div class="confirm-amount">₹ 100.00</div>
+          </div>
+          <button class="pay">Pay</button>
         </div>
       </div>
-      <div class="mx-4 mt-3">
-        <button class="btn proceed">Proceed to pay</button>
-      </div>
     </div>
-  </div>
-  <!-- --------------SCREEN 4 - CONFIRMATION ------------ -->
-  <div class="screen4 d-none">
-    <div class="g-navbar d-flex mx-3 my-2 align-items-center">
-      <div class="back-s4"><i class="fa fa-angle-left p-2"></i></div>
-      <div class="mx-auto page-title">Confirm Details</div>
-    </div>
-    <div class="ticket">
-      <div class="details">
-        <div>
-          Please confirm <br />
-          your details
-        </div>
-        <div class="user-details my-3 mt-5">
-          <div>name</div>
-          <div>vijay dhyani</div>
-        </div>
-        <div class="user-details my-2">
-          <div>CARD NUMBER</div>
-          <div>6548665452456</div>
-        </div>
-        <div class="user-details my-4">
-          <div>TOP UP AMOUNT</div>
-          <div>₹ 100.00</div>
-        </div>
-        <button class="pay">Pay</button>
-      </div>
-    </div>
-  </div>
 
-  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-    crossorigin="anonymous"></script>
-</body>
-
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
