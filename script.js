@@ -15,30 +15,49 @@ const proceed = document.querySelector(".proceed");
 const moneyInput = document.querySelector(".money-input");
 
 continueNameBtn.addEventListener("click", function () {
-  screenOne.classList.add("d-none");
-  screenTwo.classList.remove("d-none");
-  sessionStorage.setItem("uname", `${userName.value}`);
-  const uname = sessionStorage.getItem("uname");
-  document.querySelector(".confirm-name").textContent = `${uname}`;
+  if (userName.value == "") {
+    // userName.style.border = "#de7171 solid 3px ";
+    userName.classList.add("wrong");
+    // alert("enter something");
+  } else {
+    screenOne.classList.add("d-none");
+    screenTwo.classList.remove("d-none");
+    sessionStorage.setItem("uname", `${userName.value}`);
+    const uname = sessionStorage.getItem("uname");
+    document.querySelector(".confirm-name").textContent = `${uname}`;
+    userName.classList.remove("wrong");
+  }
 });
-// const test = sessionStorage.getItem("uname");
-// console.log(test);
+
 continueCardBtn.addEventListener("click", function () {
-  screenOne.classList.add("d-none");
-  screenTwo.classList.add("d-none");
-  screenThree.classList.remove("d-none");
-  sessionStorage.setItem("cardnumber", `${cardNumber.value}`);
-  const cardnumber = sessionStorage.getItem("cardnumber");
-  document.querySelector(".confirm-card").textContent = `${cardnumber}`;
+  if (cardNumber.value == "") {
+    cardNumber.classList.add("wrong");
+  } else {
+    screenOne.classList.add("d-none");
+    screenTwo.classList.add("d-none");
+    screenThree.classList.remove("d-none");
+    sessionStorage.setItem("cardnumber", `${cardNumber.value}`);
+    const cardnumber = sessionStorage.getItem("cardnumber");
+    document.querySelector(".confirm-card").textContent = `${cardnumber}`;
+    cardNumber.classList.remove("wrong");
+  }
 });
+
 proceed.addEventListener("click", function () {
-  screenOne.classList.add("d-none");
-  screenTwo.classList.add("d-none");
-  screenThree.classList.add("d-none");
-  screenFour.classList.remove("d-none");
-  sessionStorage.setItem("amount", `${moneyInput.value}`);
-  const amount = sessionStorage.getItem("amount");
-  document.querySelector(".confirm-amount").textContent = `${amount}`;
+  if (moneyInput.value == "") {
+    // userName.style.border = "#de7171 solid 3px ";
+    moneyInput.classList.add("wrong");
+    // alert("enter something");
+  } else {
+    screenOne.classList.add("d-none");
+    screenTwo.classList.add("d-none");
+    screenThree.classList.add("d-none");
+    screenFour.classList.remove("d-none");
+    sessionStorage.setItem("amount", `${moneyInput.value}`);
+    const amount = sessionStorage.getItem("amount");
+    document.querySelector(".confirm-amount").textContent = `${amount}`;
+    moneyInput.classList.remove("wrong");
+  }
 });
 
 backScreenTwo.addEventListener("click", function () {
@@ -65,7 +84,7 @@ cardNumber.addEventListener("keyup", function () {
   cardText.textContent = `${cardNumber.value}`;
 });
 
-// it will get values from sessionStorage and rediect to UPI apps
+//get values from sessionStorage and rediect to UPI apps
 document.querySelector(".pay").addEventListener("click", function () {
   const finalLink = `upi://pay?pa=${sessionStorage.getItem(
     "cardnumber"
